@@ -16,13 +16,9 @@ export default function Sidebar() {
   return (
     <>
       <div
-        className={`bg-white min-h-screen flex flex-col transition-all duration-200 relative ${
+        className={`bg-white min-h-screen flex flex-col ${
           isCollapsed ? "w-[148px]" : "w-[320px]"
-        } 
-        ${
-          // Menambahkan kondisi untuk sembunyikan sidebar pada layar kecil saat collapse
-          isCollapsed ? "md:block hidden" : "block"
-        }`}
+        } transition-all duration-200 relative`}
       >
         <div
           className={`${
@@ -30,33 +26,25 @@ export default function Sidebar() {
           } flex-grow flex flex-col gap-y-[28px] text-[16px] font-medium`}
         >
           {/* Sidebar Top */}
+          <div className={`flex items-center justify-between mb-[52px] ${isCollapsed ? "py-[48px]" :  "" } `}>
           <div
-            className={`flex items-center justify-between mb-[52px] ${
-              isCollapsed ? "py-[48px]" : ""
-            }`}
+            className={`w-full justify-center flex items-center ${
+              isCollapsed ? "justify-center p-[16px]" : "px-[24px] py-[14px]"
+            } bg-red300 rounded-[8px] text-white`}
           >
-            <div
-              className={`w-full justify-center flex items-center ${
-                isCollapsed ? "justify-center p-[16px]" : "px-[24px] py-[14px]"
-              } bg-red300 rounded-[8px] text-white`}
-            >
-              <Image
-                src={cirlcleIcon}
-                alt="circle"
-                className={`${isCollapsed ? "" : "mr-[8px]"}`}
-              />
-              <span
-                className={`text-[24px] font-semibold ${
-                  isCollapsed ? "hidden" : "block"
-                }`}
-              >
-                Sekopling
-              </span>
-            </div>
+            <Image
+              src={cirlcleIcon}
+              alt="circle"
+              className={`${isCollapsed ? "" : "mr-[8px]"}`}
+            />
+            <span className={`text-[24px] font-semibold ${isCollapsed ? "hidden" : "block"}`}>
+              Sekopling
+            </span>
+          </div>
 
             {/* Arrow Button */}
             <button
-              className="w-[56px] h-[56px] rounded-[8px] bg-white p-[16px] border-[2px] border-red100 shadow-[0_0_5px_0_rgba(255,0,0,0.5)] flex items-center justify-center absolute top-[48px] right-[-2px] transform translate-x-1/2 z-10"
+              className="w-[56px] h-[56px] rounded-[8px] bg-white p-[16px] border-[2px] border-red100 shadow-[0_0_5px_0_rgba(255,0,0,0.5)] flex items-center justify-center absolute top-[48px] right-[-2px] transform translate-x-1/2"
               onClick={() => setIsCollapsed(!isCollapsed)}
             >
               <Image src={arrowLeft} alt="arrow" />
