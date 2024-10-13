@@ -8,7 +8,7 @@ import TaskBoard from "./components/TaskBoard";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="bg-whiteDash">
         <Sidebar />
       </main>
     </>

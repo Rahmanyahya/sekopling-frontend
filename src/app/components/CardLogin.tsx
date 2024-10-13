@@ -48,7 +48,7 @@ export default function CardLogin() {
                 id="email"
                 name="email"
                 placeholder="brezizi.id@gmail.com"
-                className="w-full h-[48px] border border-gray600 rounded-[8px] px-[12px] mt-[8px]"
+                className="w-full h-[48px] border border-gray600 invalid:text-red300 rounded-[8px] px-[12px] mt-[8px]"
               />
             </div>
             <div className="mb-[24px]">
@@ -81,7 +81,7 @@ export default function CardLogin() {
             </div>
             <div className="flex items-center justify-center my-[24px]">
               <div className="h-[1px] bg-black w-full"></div>
-              <span className="mx-[12px] text-primBlack">atau</span>
+              <span className="mx-[12px] text-primBlack">Atau</span>
               <div className="h-[1px] bg-black w-full"></div>
             </div>
             <div className="mb-[24px]">
