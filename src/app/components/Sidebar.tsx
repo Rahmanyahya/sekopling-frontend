@@ -24,8 +24,8 @@ export default function Sidebar() {
   return (
     <>
       <div
-        className={`bg-white min-h-screen flex flex-col ${
-          isCollapsed ? "w-[148px]" : "w-[320px]"
+        className={`bg-white absolute min-h-screen flex flex-col ${
+          isCollapsed ? "w-[160px]" : "w-[380px]"
         } transition-all duration-200 relative ${
           isSidebarVisible ? "block" : "hidden"
         } md:block`}
@@ -87,7 +87,7 @@ export default function Sidebar() {
                 isCollapsed ? "" : "mr-[8px]"
               } group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-200 duration-200`}
             />
-            <span className={`${isCollapsed ? "hidden" : "block"}`}>
+            <span className={`text-sm ${isCollapsed ? "hidden" : "block"}`}>
               Log out
             </span>
           </button>
@@ -103,7 +103,7 @@ export default function Sidebar() {
               alt="home"
               className={`${isCollapsed ? "" : "mr-[8px]"}`}
             />
-            <span className={`${isCollapsed ? "hidden" : "block"}`}>
+            <span className={`text-sm ${isCollapsed ? "hidden" : "block"}`}>
               Dashboard
             </span>
           </button>
@@ -121,7 +121,7 @@ export default function Sidebar() {
                 isCollapsed ? "" : "mr-[8px]"
               } group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-200 duration-200`}
             />
-            <span className={`${isCollapsed ? "hidden" : "block"}`}>
+            <span className={`text-sm ${isCollapsed ? "hidden" : "block"}`}>
               Jadwal Pelajaran
             </span>
           </button>
@@ -139,20 +139,18 @@ export default function Sidebar() {
                 isCollapsed ? "" : "mr-[8px]"
               } group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-200 duration-200`}
             />
-            <span className={`${isCollapsed ? "hidden" : "block"}`}>
+            <span className={`text-sm ${isCollapsed ? "hidden" : "block"}`}>
               Pekerjaan Rumah
             </span>
           </button>
         </div>
 
-
         {/* Sidebar Bottom (Butuh Bantuan & Log Out) */}
         <div
           className={`bottom-0 absolute text-[16px] font-medium ${
             isCollapsed ? "px-[42px] py-[48px]" : "p-[48px]"
-            }`}
+          }`}
         >
-            {/* <div className="w-full border md:hidden mx-[42px] border-gray200 my-[28px]"></div> */}
           <button
             className={`w-full flex md:mb-[24px] items-center ${
               isCollapsed ? "justify-center p-[16px]" : "px-[24px] py-[14px]"
@@ -165,7 +163,7 @@ export default function Sidebar() {
                 isCollapsed ? "" : "mr-[8px]"
               } group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-200 duration-200`}
             />
-            <span className={`${isCollapsed ? "hidden" : "block"}`}>
+            <span className={`text-sm ${isCollapsed ? "hidden" : "block"}`}>
               Butuh Bantuan?
             </span>
           </button>
@@ -182,7 +180,7 @@ export default function Sidebar() {
                 isCollapsed ? "" : "mr-[8px]"
               } group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-200 duration-200`}
             />
-            <span className={`${isCollapsed ? "hidden" : "block"}`}>
+            <span className={`text-sm ${isCollapsed ? "hidden" : "block"}`}>
               Log out
             </span>
           </button>
