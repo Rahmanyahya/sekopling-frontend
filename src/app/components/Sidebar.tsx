@@ -24,7 +24,7 @@ export default function Sidebar() {
   return (
     <>
       <div
-        className={`bg-white absolute min-h-screen flex flex-col ${
+        className={`bg-white min-h-screen flex flex-col ${
           isCollapsed ? "w-[160px]" : "w-[380px]"
         } transition-all duration-200 relative ${
           isSidebarVisible ? "block" : "hidden"
